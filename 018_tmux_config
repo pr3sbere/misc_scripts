@@ -1,0 +1,32 @@
+# From Jun 9, 2026
+
+#change Prefix key to x
+unbind C-b
+set-option -g prefix C-x
+bind-key C-x send-prefix
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+# dont rename windows automatically
+set-option -g allow-rename off
+
+# Search Mode VI (default is emac)
+set-window-option -g mode-keys vi
+
+#longer history of lines
+set -g history-limit 1000000
+
+#color in status bar
+set -g status-style 'bg=colour124 fg=colour0 dim'
+
+# Detach Tmux session with Ctrl + D, no Prefix: 
+bind-key -n C-d detach
+
+# Adding global clipboard to tmux clipboard
+# Then hit Ctrl+X + [ to enter copy mode. Then hit Space followed by whatever vi movement keys to make a selection. 
+# Then, instead of hitting Enter, hit y and the selection will be copied to the clipboard.
+bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard
