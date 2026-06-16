@@ -5,7 +5,7 @@
 # SQL and XSS the most basic.
 # Need to update domain, url and interface for each engagement.
 # November 2024
-# Updated November 2025
+# Updated June 2026
 
 import argparse
 from colorama import Fore, Style, init
@@ -14,7 +14,7 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 
 # Define variables for <domain>, <url> and <interface>
-domain = "ad.parsebiosciences.com"   # Replace with your desired domain
+domain = "domain"   # Replace with your desired domain
 interface = "eth0"   # Replace with your desired interface
 url = "website.com"    # Replace with your desired URL
 gateway = "10.30.1.1"      # Replace with your desired gateway
