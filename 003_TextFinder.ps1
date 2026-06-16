@@ -4,7 +4,7 @@ This script is looking for "Findings" Inside previous Pentest reports.
 #>
 
 $path = "C:\Users\tars\Documents\001_Engagements"
-$keyword = "Debian Linux SEoL (7.x)"  # Change this to the finding!
+$keyword = "Finding Name We're Looking For"  # Change this to the finding!
 
 $word = New-Object -ComObject Word.Application
 $word.Visible = $false
